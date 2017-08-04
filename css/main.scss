@@ -1,0 +1,25 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//normalize
+@import "_misc/normalize.scss";
+
+// setups
+@import "_misc/mixins";     //примеси
+@import "_misc/fonts";      //шрифты
+@import "_misc/layout";     //основные настройки
+
+//common
+@import "blocks/common/btn.scss";
+@import "blocks/common/section-title.scss";
+@import "blocks/common/fixed-menu.scss";
+
+// blocks
+@import "blocks/hero.scss";
+@import "blocks/best.scss";
+@import "blocks/team.scss";
+@import "blocks/reviews.scss";
+@import "blocks/order.scss";

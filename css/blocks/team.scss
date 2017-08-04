@@ -1,0 +1,14 @@
+.team {
+    background: url('./img/bg/team_bg.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.team__section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba($black, .93); //возвращает цвет с заданной прозрачностью
+}

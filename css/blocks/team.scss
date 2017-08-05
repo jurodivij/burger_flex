@@ -1,5 +1,5 @@
 .team {
-    background: url('./img/bg/team_bg.png') center center no-repeat;
+    background: url('../img/bg/team_bg.png') center center no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -10,5 +10,84 @@
     right: 0;
     bottom: 0;
     width: 50%;
-    background: rgba($black, .93); //возвращает цвет с заданной прозрачностью
+    background: rgba($black, .93); 
+    //возвращает цвет с заданной прозрачностью
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team__content {
+    width: 70%;
+}
+
+.team-acco__item {
+    margin-bottom: 10px;
+    
+    &:active {
+        .team-acco__content{
+            height: auto;
+        }
+        .team-acco__title {
+            color: $yellow;
+        
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+}
+
+.team-acco__content {
+    display: flex;
+    overflow: hidden;
+    height: 0;
+}
+
+
+.team-acco__title {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 9px solid transparent;
+        border-top-color: $yellow;
+        border-bottom: none;
+        margin-right: 10px;
+    }
+}
+
+
+.team-acco__desc-prof {
+    color: #fff;
+    @include ubuntu(bold);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.team-acco__desc-text{
+    color: #fff;
+}
+
+.team-acco__avatar {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.team-acco__avatar-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
 }

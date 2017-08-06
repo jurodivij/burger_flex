@@ -5,13 +5,19 @@
     justify-content: flex-start;
 }
 
+.container {
+    margin-top: 50px;
+}
+
 .best__list {
+    margin-top: 50px;
     display: flex;
 }
 
 .best__item {
-    margin: 0px 15px;
+    //margin: 0px 150px;
     flex: 1;
+    margin-left: 2%;
 }
 
 .best__pic {
@@ -21,4 +27,15 @@
 .best__icon {
     height: 100%;
     width: 100%;
+}
+
+.best__title {
+    margin-top: 10%;
+    font-size: 24px;
+    @include lifehack();
+}
+
+.best__desc {
+    font-size: 14px;
+    @include ubuntu(light);
 }

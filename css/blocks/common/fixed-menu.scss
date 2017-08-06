@@ -1,11 +1,11 @@
 .fixed-menu {
     position: fixed;
-    top: 80px;
-    right: 45px;
+    top: 90px;
+    right: 33px;
 }
 
 .fixed-menu__item {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     &.active {
         .fixed-menu__link {

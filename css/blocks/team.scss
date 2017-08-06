@@ -13,13 +13,18 @@
     background: rgba($black, .93); 
     //возвращает цвет с заданной прозрачностью
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .team__content {
+    padding-top: 11%;
+    padding-left: 3%;
     width: 70%;
 }
+
+.team-acco {
+  }
 
 .team-acco__item {
     margin-bottom: 10px;
@@ -47,7 +52,7 @@
 
 
 .team-acco__title {
-    font-size: 14px;
+    @include gagalin();
     color: #fff;
     margin-bottom: 10px;
     display: flex;

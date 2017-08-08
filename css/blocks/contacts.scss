@@ -1,0 +1,114 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contacts__map {
+    background: url('../img/bg/contacts_bg.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    margin-top: 0;
+}
+
+
+.social__item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 18px;
+}
+
+.social__item-vk {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+.social__item-fb {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+.social__item-inst {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+.social__item-tw {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+
+.footer {
+    background-color: #000;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__contacts {
+  width: 50%;
+  margin-bottom: rem(15px);
+  @include phones {
+  width: 100%;
+  text-align: center;
+  }
+}
+
+.footer__address {
+    color: #fff;
+    margin-bottom: rem(10px);
+}
+
+.footer__phone {
+    color: $red;
+    @include ubuntu(bold);
+    text-decoration: none;
+    font-size: rem(14px);
+}
+
+.footer__social {
+  text-align: right;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.social__list {
+  position: relative;
+  top: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.social__item {
+  margin-left: rem(10px);
+}
+
+.social__link {
+  display: inline-block;
+  max-width: rem(23px);
+  max-height: rem(20px);
+  opacity: .3;
+  transition: .3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.social__link-icon {
+  width: rem(20px);
+  height: rem(20px);
+}

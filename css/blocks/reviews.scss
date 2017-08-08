@@ -18,6 +18,11 @@
     position: relative;
     filter: grayscale(100%);
 
+    @include tablets() {
+        width: 50%;
+        height: 25%;
+    }
+
     &:hover {
         .reviews__hover {
             opacity: 1;
@@ -41,6 +46,12 @@
     opacity: 0;
     transform: scale(.7);
 
+    @include tablets {
+    font-size: rem(14px);
+    padding: 0 12%;
+    text-align: center;
+  }
+
 }
 
 .reviews__hover-content {
@@ -50,9 +61,22 @@
 
 .reviews__title {
     color: #fff;
-    margin-bottom: 10px;
+    @include gagalin;
+    font-size: rem(14px);
+    margin-bottom: rem(25px);
+    
+    @include tablets {
+    margin-bottom: rem(14px);
+  }
 }
 
 .reviews__text {
     color: #fff;
+    font-size: rem(14px);
+    @include ubuntu(light);
+    margin-bottom: rem(13px);
+
+    @include phones() {
+        display: none;
+    }
 }

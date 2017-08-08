@@ -2,35 +2,113 @@
     background: url('../img/bg/order_bg.png') center center no-repeat;
     background-size: cover;
     position: relative;
+    display:flex;
+    align-items: center;
+    .section__title {
+        text-align: center;
+    }
+}
+    .container {
+    text-align: center;
+    //margin: 0 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .form {
+    margin-top: rem(50px);
+    @include tablets() {
+        margin-top: 0;
+    }
+}
+
+.order-container {
+    padding-bottom: 17%;
+}
+
+.form__container {
     display: flex;
-    flex-direction: row;
+    @include tablets() {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form__column {
+    width: 50%;
+    margin-left: 2%;
+    &:first-child {
+        margin-left: 1%;
+    }   
+    @include phones() {
+        width: 100%;
+        margin-left: 0;
+    } 
 }
 
 .form__row {
+    
     display: flex;
-    margin-bottom: 20px;
+    &.radio,
+    &.check {
+        color: #fff;
+    }
+
 }
 .form__caption {
-    font-size: 14px;
+    font-size: rem(14px);
     @include ubuntu(light);
     color: #fff;
+    margin-bottom: rem(17px);
     flex: 1;
-    margin-left: 20px;
+    text-align: left;
 }
 
 .form__input {
-    font-size: 16px;
-    padding: 14px;
+    font-size: rem(14px);
+    padding: rem(10px);
+    //padding: rem (5px) rem(10px);
     background: #fff;
-    border-radius: 7px;
-    border: 0;
-    flex: 1;
-    margin-left: 20px;
+    border-radius: rem(5px);
+    border: rem(1px) solid #d1cfcb;
+    width: 100%;    //ПОЧЕМУ??!
+    margin-left: rem(10px);
 
     &:first-child {
         margin-left: 0;
     }
+}
+
+.form__textarea {
+    height: rem(110px);
+    resize: none;
+    margin-bottom: rem(10px);
+}
+
+.check {
+    margin-bottom: rem(40px);
+}
+
+.form__btn {
+  margin-right: rem(20px);
+  border: 0;
+  background: $red;
+  font-size: rem(13px);
+  text-transform: uppercase;
+  border-radius: rem(5px);
+  color: #ffffff;
+  @include ubuntu(middle);
+  padding: rem(10px) rem(15px);
+  cursor: pointer;
+
+  @include phones() {
+    margin: 0 auto;
+  }
+}
+
+.form__btn_clear {
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: none;
+  background: transparent;
 }

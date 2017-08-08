@@ -4,8 +4,17 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+//resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
 //normalize
 @import "_misc/normalize.scss";
+
+//media
+@import "_misc/media.scss";
 
 // setups
 @import "_misc/mixins";     //примеси
@@ -13,6 +22,7 @@ $red: #e35028;
 @import "_misc/layout";     //основные настройки
 
 //common
+@import "blocks/common/hamburger.scss";
 @import "blocks/common/btn.scss";
 @import "blocks/common/section-title.scss";
 @import "blocks/common/fixed-menu.scss";
@@ -25,3 +35,4 @@ $red: #e35028;
 @import "blocks/menu.scss";
 @import "blocks/reviews.scss";
 @import "blocks/order.scss";
+@import "blocks/contacts.scss";

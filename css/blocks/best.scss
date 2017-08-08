@@ -6,22 +6,30 @@
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: rem(50px);
 }
 
 .best__list {
-    margin-top: 50px;
+    margin-top: rem(50px);
     display: flex;
+
+    @include phones() {
+        flex-direction: column;
+    }
 }
 
 .best__item {
     //margin: 0px 150px;
     flex: 1;
     margin-left: 2%;
+
+    @include phones() {
+        flex-direction: row;
+    }
 }
 
 .best__pic {
-    height: 90px;
+    height: rem(90px);
 }
 
 .best__icon {
@@ -31,11 +39,15 @@
 
 .best__title {
     margin-top: 10%;
-    font-size: 24px;
+    font-size: rem(24px);
     @include lifehack();
 }
 
 .best__desc {
-    font-size: 14px;
+    font-size: rem(14px);
     @include ubuntu(light);
+
+    @include phones() {
+        text-align: left;
+    }
 }

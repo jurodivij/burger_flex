@@ -2,8 +2,6 @@
     @include gagalin();
     font-size: rem(72px);
     color: $yellow;
-    margin-bottom: rem(10px);
-
     &_color_black {
         color: $black;
     }

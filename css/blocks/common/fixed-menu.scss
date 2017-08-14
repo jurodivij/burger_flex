@@ -1,14 +1,14 @@
 .fixed-menu {
     position: fixed;
     top: rem(90px);
-    right: rem(33px);
+    right: rem(49px);
     @include tablets() {
         display: none;
     }
 }
 
 .fixed-menu__item {
-    margin-bottom: rem(5px);
+    margin-bottom: rem(5.2px);
 
     &.active {
         .fixed-menu__link {

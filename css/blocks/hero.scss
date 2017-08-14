@@ -10,9 +10,10 @@
 
 .header {
     display: flex;
-    align-items: flex-start;//flex-start
+    align-items: center;//flex-start
     justify-content: flex-end;    
-    padding-top: 2.5%;
+    padding-top: 0.6rem;
+    //margin-left: -0.2rem; 
     @include tablets() {
         padding-top: 0;
         justify-content: flex-start;
@@ -20,14 +21,22 @@
 
 }
 
+.logo {
+    margin-left: rem(-6px);
+    margin-right: auto;
+    margin-top: rem(2px);
+}
+
+.logo__img {
+    
+}
+
 .header__btns {
     display: flex;
     align-items: center;
+    margin-right: 0.1rem;
+    padding-bottom: rem(8px);
 
-}
-
-.logo {
-    margin-right: auto;
 }
 
 .nav {
@@ -58,13 +67,14 @@
         height: rem(4px);
         background: #fff;
         border-radius: 50%;
-        margin: 0 rem(16px);
+        margin: 0 rem(15.5px);
     }
 }
 
 .nav__link {
     color: #fff;
     font-size: rem(13px);
+    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;//чтобы исчезли подчеркивания
 }
@@ -74,14 +84,18 @@
     align-items: center;
 }
 
-
-
+.hero__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
 
 .hero__present {
     display:flex;
     align-items: flex-end;
-    padding-bottom: 9%;
-    padding-left: 4%;
+    padding-bottom: rem(93px);
+    padding-left: rem(15px);
     @include tablets() {
         flex-direction: column;
         align-items: center;
@@ -99,35 +113,37 @@
 }
 
 .hero__text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     @include tablets() {
         text-align: center;
     }
 }
 
+.hero__title {
+    padding-left: rem(12px);
+}
+
 .hero__desc {
     color: #fff;
-    font-size: rem(65px);
+    font-size: rem(62px);
     @include lifehack();
     line-height: 1;
-    padding-bottom: 15%
+    margin-top: rem(10px);
+    padding-bottom: rem(69px);
+    padding-left: rem(15px);
 }
 
 .hero__image-pic {
     max-width: 100%;
 }
 
-.hero__container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-}
-
 .arrow-btn {
     display: flex;
     justify-content: center;
     margin-bottom: rem(40px);
-    height: rem(20px);
+    height: rem(15px);
 }
 
 

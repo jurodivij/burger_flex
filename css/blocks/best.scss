@@ -3,26 +3,27 @@
     background-size: cover;
     text-align: center;
     justify-content: flex-start;
+    padding-top: rem(50px);
 }
 
-.container {
-    margin-top: rem(50px);
-}
 
 .best__list {
-    margin-top: rem(50px);
+    margin-top: rem(67px);
+    align-items: center;
+    justify-content: space-between;
     display: flex;
-
     @include phones() {
         flex-direction: column;
     }
 }
 
 .best__item {
-    //margin: 0px 150px;
-    flex: 1;
-    margin-left: 2%;
-
+    //margin: 0 rem(10px);
+    display: flex;
+    flex-direction: column;
+    //justify-content: flex-start;
+    width: 31%;
+    //flex: 1;
     @include phones() {
         flex-direction: row;
     }
@@ -30,21 +31,25 @@
 
 .best__pic {
     height: rem(90px);
+    
+
 }
 
 .best__icon {
-    height: 100%;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .best__title {
-    margin-top: 10%;
+    margin-top: rem(30px);
     font-size: rem(24px);
     @include lifehack();
 }
 
 .best__desc {
+    padding-top: rem(8px);
     font-size: rem(14px);
+    line-height: 1.8;
     @include ubuntu(light);
 
     @include phones() {

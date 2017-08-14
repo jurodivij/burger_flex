@@ -1,10 +1,13 @@
 .btn {
-    padding: rem(8px) rem(8px);
+    padding: rem(8px) rem(16px) ;
     background: $red;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: rem(5px);
     color: #fff;
     display: inline-flex; //не растягивается на всю ширину
-    margin-left: rem(15px);
+    margin-left: rem(13px);
+    margin-right: rem(-2px);
+    font-size: rem(13px);
+    font-weight: 400;
 }

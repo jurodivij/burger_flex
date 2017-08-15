@@ -881,7 +881,6 @@ footer {
 .burgers__container {
   height: 80%;
   margin: auto 0.3125rem;
-  border: 1px solid black;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -889,7 +888,6 @@ footer {
 
 .burgers__left {
   width: 5%;
-  border: 1px solid red;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -905,7 +903,6 @@ footer {
 
 .burgers__main {
   width: 90%;
-  border: 1px solid red;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -913,7 +910,6 @@ footer {
 
 .burgers__right {
   width: 5%;
-  border: 1px solid red;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -950,7 +946,6 @@ footer {
 
 .burgers__column {
   width: 50%;
-  border: 1px solid green;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -967,7 +962,8 @@ footer {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  position: relative; }
 
 .burgers__preview-img {
   background-size: contain;
@@ -976,12 +972,98 @@ footer {
   margin: auto;
   margin-left: -0.9375rem; }
 
-.burgers__container {
+.burgers__contain {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1.1875rem;
+  left: 1.25rem;
   width: 5.625rem;
-  height: 5.625rem; }
+  height: 5.625rem;
+  background-color: #f08c33;
+  border-radius: 0.1875rem;
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  font-size: 0.875rem; }
+  .burgers__contain:hover {
+    background-color: #e35028; }
+
+.wrapper__contain {
+  position: absolute;
+  left: 5.5rem;
+  top: 0.125rem;
+  width: 16.875rem;
+  height: 20.75rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  opacity: 0.9; }
+
+.burgers__kkal {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1.125rem;
+  width: 5.625rem;
+  height: 5.625rem;
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  font-size: 0.875rem; }
+
+.contain__list {
+  left: 0rem; }
+
+.contain__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -0.625rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem; }
+  .contain__item:first-child {
+    margin-top: 0; }
+
+.contain__item_caption {
+  margin-top: 0.9375rem; }
+
+.contain__item_weight {
+  margin-top: 0.9375rem;
+  margin-right: 0.9375rem; }
+
+.contain__link {
+  text-decoration: none; }
+
+.contain__icon {
+  width: 2.875rem;
+  height: 2.75rem;
+  margin-left: 1.25rem;
+  margin-top: 1.0625rem; }
+
+.kkal__icon {
+  width: 3.75rem;
+  height: 3.75rem; }
+
+.kkal-icon__numb {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 2.375rem;
+  font-size: 1.25rem;
+  color: #f9d09d; }
+
+.kkal-icon__text {
+  position: absolute;
+  left: 0.875rem;
+  bottom: 0.625rem;
+  font-size: 0.875rem;
+  color: #f9d09d; }
+
+.contain__label {
+  margin-left: 1.25rem;
+  color: #fff; }
 
 .burgers__caption {
   margin-top: 0.625rem;
@@ -996,6 +1078,33 @@ footer {
 .burgers__row {
   margin-left: 0.625rem;
   margin-bottom: 2.8125rem; }
+
+.burgers__order {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -9.375rem;
+  margin-top: -2.5rem; }
+
+.burgers__price {
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  font-size: 4.5rem;
+  color: #e35028; }
+
+.burgers__rub {
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  font-size: 1.875rem;
+  color: #e35028;
+  margin-right: 1.5625rem; }
 
 .team {
   background: url("../img/bg/team_bg.png") center center no-repeat;
@@ -1478,7 +1587,6 @@ footer {
 .contacts__map {
   background: url("../img/bg/contacts_bg.jpg") no-repeat;
   background-size: cover;
-  position: relative;
   height: 100%;
   padding-bottom: 4rem; }
 

@@ -8,13 +8,13 @@
 .burgers__container {
   height: 80%;
   margin: auto rem(5px);
-  border: 1px solid black;
+//  border: 1px solid black;
   display: flex;
 }
 
 .burgers__left {
   width:5%;
-  border: 1px solid red;
+//  border: 1px solid red;
   display:flex;
   align-items: center;
   justify-content: flex-end;
@@ -22,14 +22,14 @@
 
 .burgers__main {
   width:90%;
-  border: 1px solid red;
+//  border: 1px solid red;
   display: flex;
 
 }
 
 .burgers__right {
   width:5%;
-  border:  1px solid red;
+//  border:  1px solid red;
   display:flex;
   align-items: center;
   justify-content: flex-start;
@@ -59,12 +59,13 @@
 
 .burgers__column {
   width: 50%;
-  border: 1px solid green;
+//  border: 1px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  //flex: 1;
+  position: relative;
+
 }
 
 .burgers__preview-img {
@@ -75,13 +76,109 @@
   margin-left: rem(-15px);
 }
 
-.burgers__container {
+.burgers__contain {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: rem(19px);
+  left: rem(20px);
   width: rem(90px);
   height: rem(90px);
+  background-color: #f08c33;
+  border-radius: rem(3px);
+  @include gagalin();
+  font-size: rem(14px);
+  &:hover {
+    background-color: #e35028;
+  }
 }
+
+.wrapper__contain {
+  position: absolute;
+  left: rem(88px);
+  top: rem(2px);
+  width: rem(270px);
+  height: rem(332px);
+  background-color: #fff;
+  border-radius: rem(4px);
+  opacity: 0.9;
+  //display: none;
+}
+
+.burgers__kkal {
+  position:absolute;
+  bottom: rem(8px);
+  left: rem(18px);
+  width: rem(90px);
+  height: rem(90px);
+  @include gagalin();
+  font-size: rem(14px);
+}
+
+.contain__list {
+  left: rem(0px);
+}
+
+.contain__item {
+  display: flex;
+  margin-top: rem(-10px);
+  justify-content: space-between;
+  align-items: center;
+  @include ubuntu(medium);
+  font-size: rem(14px);
+  &:first-child{
+    margin-top: 0;
+  }
+}
+
+.contain__item_caption {
+  margin-top: rem(15px);
+ //  margin-left: rem(-65px)
+}
+
+.contain__item_weight {
+  margin-top: rem(15px);
+  margin-right: rem(15px)
+}
+
+.contain__link {
+  text-decoration: none;
+  
+}
+
+.contain__icon {
+  width: rem(46px);
+  height: rem(44px);
+  margin-left: rem(20px);
+  margin-top: rem(17px);
+
+}
+
+.kkal__icon {
+  width: rem(60px);
+  height: rem(60px);
+  
+}
+
+.kkal-icon__numb {
+  position: absolute;
+  left: rem(12px);
+  bottom: rem(38px);
+  font-size: rem(20px);
+  color: #f9d09d;
+}
+
+.kkal-icon__text {
+  position: absolute;
+  left: rem(14px);
+  bottom: rem(10px);
+  font-size: rem(14px);
+  color: #f9d09d;
+}
+
+.contain__label {
+  margin-left: rem(20px);
+  color: #fff;
+}
+
 
 .burgers__caption {
 
@@ -97,7 +194,28 @@
 }
 
 .burgers__row {
+  //margin-top: rem(45px);
   margin-left: rem(10px);
   margin-bottom: rem(45px);
 }
 
+.burgers__order {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin-left: rem(-150px);
+  margin-top: rem(-40px);
+}
+
+.burgers__price {
+  @include gagalin();
+  font-size: rem(72px);
+  color: #e35028;
+}
+
+.burgers__rub {
+  @include gagalin();
+  font-size: rem(30px);
+  color: #e35028;
+  margin-right: rem(25px);
+}

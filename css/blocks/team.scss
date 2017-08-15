@@ -9,7 +9,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 50%;
+    width: 49%;
     background: rgba($black, .93); 
     //возвращает цвет с заданной прозрачностью
     display: flex;
@@ -24,7 +24,6 @@
 
 .team__content {
     padding-top: 11%;
-    padding-left: 3%;
     width: 70%;
     @include tablets() {
         padding: 0;
@@ -34,6 +33,7 @@
 }
 
 .team-acco {
+    margin-top: rem(64px);
     @include tablets() {
         display:flex;
         flex-direction: column;
@@ -49,13 +49,30 @@
     &:active {
         .team-acco__content{
             height: auto;
+            padding-left: rem(15px);
+            margin-bottom: rem(36px);
         }
         .team-acco__title {
             color: $yellow;
-        
+            margin-bottom: rem(14px);        
             &:before {
                 transform: rotate(180deg);
             }
+        }
+        .team-acco__desc {
+            padding-left: rem(21px);
+        }
+        .team-acco__desc-prof {
+            color: #fff;
+            @include ubuntu(bold);
+            font-size: rem(14px);
+            margin-bottom: rem(10px);     
+        }
+        .team-acco__desc-text {
+            margin-top: rem(11px);
+            line-height:1.8;
+            color: #fff;
+            font-size:rem(14px);
         }
     }
     @include tablets() {
@@ -79,6 +96,7 @@
 
 .team-acco__title {
     @include gagalin();
+    font-size: rem(14px);
     color: #fff;
     margin-bottom: rem(20px);
     display: flex;
@@ -92,7 +110,7 @@
         content: "";
         width: 0;
         height: 0;
-        border: rem(9px) solid transparent;
+        border: rem(4px) solid transparent;
         border-top-color: $yellow;
         border-bottom: none;
         margin-right: rem(10px);
@@ -100,15 +118,8 @@
 }
 
 
-.team-acco__desc-prof {
-    color: #fff;
-    @include ubuntu(bold);
-    font-size: rem(15px);
-    margin-bottom: rem(10px);
-}
-
 .team-acco__desc-text{
-    color: #fff;
+ 
 }
 
 .team-acco__avatar {

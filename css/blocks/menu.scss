@@ -6,8 +6,8 @@
 
 .menu__title {
 	position: absolute;
-	top: 10%;
-	left: 10%;
+	top: rem(82px);
+	left: rem(96px);
 }
 
 .menu-acco {
@@ -15,7 +15,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-  display: flex;
+ 	display: flex;
 }
 
 .menu-acco__item {
@@ -35,7 +35,7 @@
 	float: left;
 	@include cover;
 	text-decoration: none;
-    position: relative;
+	position: relative;
 }
 
 .menu-acco__trigger-text {
@@ -48,8 +48,9 @@
   transform: rotate(-90deg) translateY(-50%);
   transform-origin: 0 0;
   left: 50%;
-  top: 100%;
-  margin-top: rem(-20px);
+  top: 90%;
+ // margin-top: rem(-20px);
+
 }
 
 .menu-acco__content {

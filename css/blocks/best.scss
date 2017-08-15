@@ -8,8 +8,8 @@
 
 
 .best__list {
-    margin-top: rem(67px);
-    align-items: center;
+    margin-top: rem(70px);
+    align-items: baseline;
     justify-content: space-between;
     display: flex;
     @include phones() {
@@ -18,21 +18,16 @@
 }
 
 .best__item {
-    //margin: 0 rem(10px);
     display: flex;
     flex-direction: column;
-    //justify-content: flex-start;
     width: 31%;
-    //flex: 1;
     @include phones() {
         flex-direction: row;
     }
 }
 
 .best__pic {
-    height: rem(90px);
-    
-
+    height: rem(85px);   
 }
 
 .best__icon {
@@ -43,11 +38,12 @@
 .best__title {
     margin-top: rem(30px);
     font-size: rem(24px);
+    line-height: 1.2;
     @include lifehack();
 }
 
 .best__desc {
-    padding-top: rem(8px);
+    padding-top: rem(12px);
     font-size: rem(14px);
     line-height: 1.8;
     @include ubuntu(light);

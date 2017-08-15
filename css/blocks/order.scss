@@ -8,7 +8,8 @@
         text-align: center;
     }
 }
-    .container {
+    .order-container {
+    height: 81%;
     text-align: center;
     //margin: 0 0;
     display: flex;
@@ -23,7 +24,7 @@
 }
 
 .order-container {
-    padding-bottom: 17%;
+   // padding-bottom: 17%;
 }
 
 .form__container {
@@ -36,9 +37,9 @@
 
 .form__column {
     width: 50%;
-    margin-left: 2%;
+    margin-left: rem(22px);
     &:first-child {
-        margin-left: 1%;
+        margin-left: 0;
     }   
     @include phones() {
         width: 100%;
@@ -59,20 +60,30 @@
     font-size: rem(14px);
     @include ubuntu(light);
     color: #fff;
-    margin-bottom: rem(17px);
+    margin-top: rem(18px);
     flex: 1;
     text-align: left;
+    padding-left: rem(18px);
+    &:first-child {
+        padding-left: 0;
+        padding-bottom: rem(7.5px);
+        margin-top: rem(12px);
+    }
+    &:nth-child(2) {
+        margin-top: rem(12px);
+    }
+
 }
 
 .form__input {
     font-size: rem(14px);
-    padding: rem(10px);
+    padding: rem(8.5px);
     //padding: rem (5px) rem(10px);
     background: #fff;
     border-radius: rem(5px);
     border: rem(1px) solid #d1cfcb;
     width: 100%;    //ПОЧЕМУ??!
-    margin-left: rem(10px);
+    margin-left: rem(19px);
 
     &:first-child {
         margin-left: 0;
@@ -80,13 +91,29 @@
 }
 
 .form__textarea {
-    height: rem(110px);
+    height: rem(108px);
     resize: none;
-    margin-bottom: rem(10px);
+    margin-bottom: rem(20px);
+}
+
+.radio {
+    //margin-top: rem(5px);
+}
+
+.radio__text {
+    font-size: rem(14px);
+    margin-left: rem(10px);
+    margin-right: rem(25px);
+    margin-bottom: rem(23px);
 }
 
 .check {
-    margin-bottom: rem(40px);
+    
+    margin-bottom: rem(15px);
+}
+.check__text {
+    font-size: rem(14px);
+    margin-left: rem(10px);
 }
 
 .form__btn {

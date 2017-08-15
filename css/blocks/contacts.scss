@@ -5,11 +5,11 @@
 }
 
 .contacts__map {
-    background: url('../img/bg/contacts_bg.jpg') center center no-repeat;
+    background: url('../img/bg/contacts_bg.jpg')  no-repeat;
     background-size: cover;
     position: relative;
     height: 100%;
-    margin-top: 0;
+    padding-bottom: rem(64px);
 }
 
 
@@ -43,6 +43,7 @@
 
 .footer {
     background-color: #000;
+    height: rem(64px);
 }
 
 .footer__container {
@@ -56,31 +57,37 @@
 
 .footer__contacts {
   width: 50%;
-  margin-bottom: rem(15px);
   @include phones {
   width: 100%;
-  text-align: center;
+  //text-align: left;
   }
 }
 
 .footer__address {
+    padding-top: rem(6px);
+    padding-left: rem(80px);
+    margin-bottom: rem(3px);
     color: #fff;
-    margin-bottom: rem(10px);
+    font-size: rem(14px);
 }
 
 .footer__phone {
+    padding-left: rem(81px);
     color: $red;
     @include ubuntu(bold);
     text-decoration: none;
     font-size: rem(14px);
 }
 
-.footer__social {
-  text-align: right;
-  margin-bottom: 0;
-  display: flex;
-  justify-content: flex-end;
+.phone-icon {
+  width: rem(10px);
+  height: rem(10px);
+  margin-right: rem(5px);
+}
 
+.footer__social {
+  margin-top: rem(10px);
+  margin-left: rem(315px);
   @include phones {
     justify-content: center;
   }
@@ -89,12 +96,10 @@
 .social__list {
   position: relative;
   top: 50%;
-  display: flex;
-  align-items: center;
 }
 
 .social__item {
-  margin-left: rem(10px);
+  margin-left: rem(15px);
 }
 
 .social__link {

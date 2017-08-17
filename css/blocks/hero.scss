@@ -4,16 +4,11 @@
     position: relative;
 }
 
-.hero__wrapper {
-  //  height: 80%;
-}
-
 .header {
     display: flex;
-    align-items: center;//flex-start
+    align-items: flex-start;
     justify-content: flex-end;    
-    padding-top: 0.6rem;
-    //margin-left: -0.2rem; 
+    padding-top: rem(30px);
     @include tablets() {
         padding-top: 0;
         justify-content: flex-start;
@@ -24,11 +19,7 @@
 .logo {
     margin-left: rem(-6px);
     margin-right: auto;
-    margin-top: rem(2px);
-}
-
-.logo__img {
-    
+    margin-top: rem(-20px);
 }
 
 .header__btns {
@@ -78,6 +69,10 @@
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;//чтобы исчезли подчеркивания
+    &:hover{
+        text-decoration: underline;
+        color: $red;
+    }
 }
 
 .header__portable {

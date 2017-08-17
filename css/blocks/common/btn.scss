@@ -10,4 +10,10 @@
     margin-right: rem(-2px);
     font-size: rem(13px);
     font-weight: 400;
+    
+    &:hover {
+        background-color: #c1401e;
+        transition-duration: 0.4s;
+         
+    }
 }

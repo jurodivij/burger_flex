@@ -2,47 +2,20 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-.contacts__map {
-    background: url('../img/bg/contacts_bg.jpg')  no-repeat;
+    background: url(../img/bg/contacts_bg.jpg)  no-repeat;
     background-size: cover;
     height: 100%;
-    padding-bottom: rem(64px);
+    position: relative;
+    //padding-bottom: rem(64px);
 }
-
-
-.social__item {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 18px;
-}
-
-.social__item-vk {
-    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
-    background-size: cover;
-}
-
-.social__item-fb {
-    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
-    background-size: cover;
-}
-
-.social__item-inst {
-    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
-    background-size: cover;
-}
-
-.social__item-tw {
-    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
-    background-size: cover;
-}
-
 
 .footer {
-    background-color: #000;
-    height: rem(64px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../img/bg/footer.jpg) no-repeat;
+    background-size: cover;
+    height: rem(58px);
 }
 
 .footer__container {
@@ -85,8 +58,10 @@
 }
 
 .footer__social {
-  margin-top: rem(10px);
-  margin-left: rem(315px);
+  width: 50%;
+  text-align: right;
+  padding-right: rem(75px);
+  padding-top: rem(10px);
   @include phones {
     justify-content: center;
   }
@@ -116,3 +91,32 @@
   width: rem(20px);
   height: rem(20px);
 }
+
+.social__item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 18px;
+}
+
+.social__item-vk {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+.social__item-fb {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+.social__item-inst {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+.social__item-tw {
+    background: url(../img/sprite/sprite.svg#vk) center center no-repeat;
+    background-size: cover;
+}
+
+

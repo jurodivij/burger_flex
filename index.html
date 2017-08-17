@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-3.2.1.js"></script> 
     <title>Document</title>
 </head>
 <body>
@@ -53,14 +54,14 @@
                 </div>               
               </div>  
             <div class="arrow-btn">
-                        <svg class="arrow-icon">
+                        <svg class="arrow-icon" style="fill: #fff">
                             <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
                         </svg>
             </div>
             </section>
                 
             <section class="section best">
-                <div class="container">
+                <div class="container container-best">
                     <div class="section-title section-title_color_black">
                         Мы лучшие
                     </div>
@@ -314,7 +315,9 @@
                 <ul class="menu-acco">
                     <li class="menu-acco__item">
                         <a class="menu-acco__trigger" href="#" style="background-image: url('./img/bg/menu/meats.jpg')">
-                            <div class="menu-acco__trigger-text">Для мясоедов</div>
+                            <div class="menu-acco__trigger-text">
+                                <span>Для мясоедов</span>
+                            </div>
                         </a>
                         <div class="menu-acco__content">
                             <div class="menu-acco__text">
@@ -330,7 +333,9 @@
                     </li>
                     <li class="menu-acco__item">
                         <a class="menu-acco__trigger" href="#" style="background-image: url('./img/bg/menu/vegans.jpg')">
-                            <div class="menu-acco__trigger-text">Вегетарианское</div>
+                            <div class="menu-acco__trigger-text">
+                                <span>Вегетарианское</span>
+                            </div>
                         </a>
                         <div class="menu-acco__content">
                             <div class="menu-acco__text">
@@ -346,7 +351,9 @@
                     </li>
                     <li class="menu-acco__item">
                         <a class="menu-acco__trigger" href="#" style="background-image: url('./img/bg/menu/diets.jpg')">
-                            <div class="menu-acco__trigger-text">Диетическое</div>
+                            <div class="menu-acco__trigger-text">
+                                <span>Диетическое</span>
+                            </div>
                         </a>
                         <div class="menu-acco__content">
                             <div class="menu-acco__text">
@@ -518,7 +525,7 @@
                         Закажите доставку
                     </div>
                     <div class="form">
-                        <form action="">
+                        <form class="order-form"action="">
                            <div class="form__container">
                                 <div class="form__column">
                                     <div class="form__row">
@@ -653,5 +660,6 @@
         <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
         <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
     </ul>
+    <script src="./js/main.js"></script>
 </body>
 </html>

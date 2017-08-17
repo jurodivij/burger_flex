@@ -11,7 +11,7 @@
     .order-container {
     height: 81%;
     text-align: center;
-    //margin: 0 0;
+    margin-bottom: 0;
     display: flex;
     justify-content: flex-start;
 }
@@ -21,10 +21,6 @@
     @include tablets() {
         margin-top: 0;
     }
-}
-
-.order-container {
-   // padding-bottom: 17%;
 }
 
 .form__container {

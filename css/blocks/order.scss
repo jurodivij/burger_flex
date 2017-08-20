@@ -4,8 +4,14 @@
     position: relative;
     display:flex;
     align-items: center;
-    .section__title {
-        text-align: center;
+
+    .section-title {
+        @include phones() {
+            font-size: rem(60px);
+            width: 60%;
+            margin: 0 auto;
+            line-height: 1.3;
+        }
     }
 }
     .order-container {
@@ -14,12 +20,19 @@
     margin-bottom: 0;
     display: flex;
     justify-content: flex-start;
+    @include phones() {
+        width: 100%;
+        height: 87%;
+        margin-left: rem(10px);
+    }
 }
 
 .form {
     margin-top: rem(50px);
     @include tablets() {
-        margin-top: 0;
+    }
+    @include phones() {
+        margin-top: rem(12px);
     }
 }
 
@@ -37,6 +50,10 @@
     &:first-child {
         margin-left: 0;
     }   
+    @include tablets() {
+        width: 65%;
+        margin-left: 0;
+    }
     @include phones() {
         width: 100%;
         margin-left: 0;
@@ -49,6 +66,14 @@
     &.radio,
     &.check {
         color: #fff;
+    }
+    @include tablets() {
+        margin-bottom: rem(4px);
+    }
+    @include phones() {
+        &:first-child {
+            margin-bottom: 0;
+        }
     }
 
 }
@@ -68,6 +93,10 @@
     &:nth-child(2) {
         margin-top: rem(12px);
     }
+    @include phones() {
+        font-size: rem(16px);
+        //width: 100%;
+    }
 
 }
 
@@ -84,16 +113,26 @@
     &:first-child {
         margin-left: 0;
     }
+    @include phones() {
+        font-size: rem(22px);
+    }
 }
 
 .form__textarea {
     height: rem(108px);
     resize: none;
     margin-bottom: rem(20px);
+    @include phones() {
+        height: rem(135px);
+    }
 }
 
 .radio {
-    //margin-top: rem(5px);
+    @include phones() {
+        margin-top: rem(30px);
+        justify-content: center;
+        align-items: baseline;
+    }
 }
 
 .radio__text {
@@ -101,15 +140,27 @@
     margin-left: rem(10px);
     margin-right: rem(25px);
     margin-bottom: rem(23px);
+    @include phones() {
+        font-size: rem(16px);
+        margin: 0;
+        margin-right: rem(30px);
+        //margin-left: rem(20px);
+    }
 }
 
-.check {
-    
+.check { 
     margin-bottom: rem(15px);
+    @include phones() {
+        margin-top: rem(40px);
+        justify-content:  center;
+    }
 }
 .check__text {
     font-size: rem(14px);
     margin-left: rem(10px);
+    @include phones() {
+        font-size: rem(18px);
+    }
 }
 
 .form__btn {
@@ -123,10 +174,17 @@
   @include ubuntu(middle);
   padding: rem(10px) rem(15px);
   cursor: pointer;
-
-  @include phones() {
-    margin: 0 auto;
+  @include tablets() {
+    margin-top: rem(22px);
+    margin-left: rem(5px)
   }
+  @include phones() {
+    margin: rem(32px) rem(12px);
+    font-size: rem(18px);
+    &:first-child {
+        margin-left: rem(170px);
+    }
+   }
 }
 
 .form__btn_clear {

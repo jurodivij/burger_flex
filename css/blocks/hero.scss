@@ -2,6 +2,14 @@
     background: url('../img/bg/hero_bg.png') center center no-repeat;
     background-size: cover;
     position: relative;
+    @include tablets() {
+        margin-left: rem(3px);
+    }
+}
+.hero>.container {
+    @include tablets() {
+        margin-top: rem(32px);
+    }
 }
 
 .header {
@@ -20,6 +28,10 @@
     margin-left: rem(-6px);
     margin-right: auto;
     margin-top: rem(-20px);
+    @include tablets() {
+        margin-left: 0;
+    }
+
 }
 
 .header__btns {
@@ -27,7 +39,6 @@
     align-items: center;
     margin-right: 0.1rem;
     padding-bottom: rem(8px);
-
 }
 
 .nav {
@@ -78,6 +89,10 @@
 .header__portable {
     display: flex;
     align-items: center;
+    @include phones() {
+        margin-top: rem(2px);
+        margin-right: rem(-10px);
+    }
 }
 
 .hero__container {
@@ -85,6 +100,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    @include tablets() {
+        margin-top: rem(50px);
+    @include phones() {
+        margin-top: rem(30px);
+    }
+    }
 }
 
 .hero__present {
@@ -97,14 +118,23 @@
         align-items: center;
         padding-bottom: 0;
         padding-left: 0;
-        padding: 0 20%;    
+        padding: 1.5% 20%;    
+    @include phones() {
+        padding: 0;
+    }
     }
 }
 
 .hero__image {
     @include tablets() {
+        margin-left: rem(10px);
         float: none;
         width: auto;
+    }
+    @include phones() {
+        width: 85%;
+        margin-left: rem(20px);
+      //  height: rem(100px);
     }
 }
 
@@ -114,11 +144,18 @@
     text-align: left;
     @include tablets() {
         text-align: center;
+    @include phones() {
+        margin-top: rem(20px);
+    }
     }
 }
 
 .hero__title {
     padding-left: rem(12px);
+    @include tablets() {
+        font-size: rem(75px);
+        margin-bottom: rem(5px);
+    }
 }
 
 .hero__desc {
@@ -129,10 +166,17 @@
     margin-top: rem(10px);
     padding-bottom: rem(69px);
     padding-left: rem(15px);
+    @include tablets() {
+        font-size: rem(65px);
+    }
+    @include phones() {
+        margin-top: 0;
+    }
 }
 
-.hero__image-pic {
-    max-width: 100%;
+.hero__image_pic {
+    width: 100%;
+    height: 100%;
 }
 
 .arrow-btn {
@@ -140,6 +184,9 @@
     justify-content: center;
     margin-bottom: rem(40px);
     height: rem(15px);
+    @include tablets() {
+        margin-left: rem(20px);
+    }
 }
 
 

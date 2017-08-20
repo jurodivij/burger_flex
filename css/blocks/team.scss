@@ -26,21 +26,38 @@
     padding-top: 11%;
     width: 70%;
     @include tablets() {
+        margin-top: rem(35px);
+        margin-left: rem(20px);
         padding: 0;
-        width: 100%;
+        height: 85%;
+        width: 50%;
         text-align: center;
+    }
+    @include phones() {
+        margin: 0;
+        margin-left: rem(20px);
+        margin-bottom: rem(20px);
+
+    }
+}
+.team__content>.section-title {
+    @include phones {
+        font-size: rem(60px);
     }
 }
 
 .team-acco {
     margin-top: rem(64px);
     @include tablets() {
+        margin-top: rem(115px);
         display:flex;
         flex-direction: column;
         align-items: center;
-     //   text-align: center;
-        
     }
+    @include phones() {
+        margin-top: rem(100px);
+        margin-left: rem(5px);
+    };
   }
 
 .team-acco__item {
@@ -51,6 +68,10 @@
             height: auto;
             padding-left: rem(15px);
             margin-bottom: rem(36px);
+            @include tablets() {
+                padding-left: 0;
+                margin-bottom: rem(20px);
+            }
         }
         .team-acco__title {
             color: $yellow;
@@ -66,13 +87,29 @@
             color: #fff;
             @include ubuntu(bold);
             font-size: rem(14px);
-            margin-bottom: rem(10px);     
+            margin-bottom: rem(10px);
+            @include tablets() {
+                margin-top: rem(22px);
+                margin-right: rem(30px)
+            }
+            @include phones() {
+                font-size: rem(16px);
+            }
         }
         .team-acco__desc-text {
             margin-top: rem(11px);
             line-height:1.8;
             color: #fff;
             font-size:rem(14px);
+            @include tablets() {
+                font-size: rem(15px);
+            }
+            @include phones() {
+                margin-top: rem(17px);
+                padding-right: rem(25px);
+                width: rem(430px);
+                font-size: rem(17px);
+            }
         }
     }
     @include tablets() {
@@ -102,10 +139,11 @@
     display: flex;
     align-items: center;
     @include tablets() {
-        font-size: rem(25px);
-        
+        font-size: rem(25px); 
     }
-    
+    @include phones() {
+        font-size: rem(30px); 
+    }
     &:before {
         content: "";
         width: 0;
@@ -128,6 +166,10 @@
     overflow: hidden;
     border-radius: 50%;
     position: relative;
+    @include phones() {
+        width: rem(120px);
+        height: rem(120px);
+    }
 }
 
 .team-acco__avatar-pic {

@@ -8,6 +8,23 @@
 .container-best {
     margin: auto auto;
     padding-bottom: rem(125px);
+    @include tablets() {
+        margin: 13% auto;
+    }
+    @include phones() {
+        padding-bottom: 0;
+        margin: 7% 0;
+        width: 100%;
+        margin-left: rem(15px);
+        margin-bottom: rem(155px);
+    }
+}
+
+.container-best>.section-title {
+    @include phones() {
+        font-size: rem(62px);
+        padding-top: rem(12px);
+    }
 }
 
 
@@ -16,7 +33,11 @@
     align-items: baseline;
     justify-content: space-between;
     display: flex;
+    @include tablets() {
+        margin-top: rem(170px);   
+    }
     @include phones() {
+        margin-top: rem(80px);
         flex-direction: column;
     }
 }
@@ -27,11 +48,27 @@
     width: 31%;
     @include phones() {
         flex-direction: row;
+        width: 100%;
+        //margin-top: rem(5px);
+        margin-bottom: rem(58px);
+        &:last-child {
+            margin-bottom: rem(90px);
+        }
     }
 }
 
 .best__pic {
-    height: rem(85px);   
+    height: rem(85px);
+    @include phones() {
+        height: 90px;
+        width: 90px;
+        margin-left: rem(20px);
+        margin-right: rem(40px);
+    }   
+}
+
+.best__text {
+    width: 70%;
 }
 
 .best__icon {
@@ -44,6 +81,15 @@
     font-size: rem(24px);
     line-height: 1.2;
     @include lifehack();
+    @include tablets() {
+        margin-top: rem(40px);
+    }
+    @include phones() {
+        margin-top: 0;
+        text-align: left;
+        font-size: rem(30px);
+        margin-bottom: rem(5px);
+    }
 }
 
 .best__desc {
@@ -54,5 +100,6 @@
 
     @include phones() {
         text-align: left;
+        font-size: rem(17px);
     }
 }

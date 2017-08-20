@@ -8,4 +8,7 @@
     &_color_white {
         color: #fff;
     }
+    @include tablets() {
+        font-size: rem(76px);
+    }
 }

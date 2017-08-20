@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: url(../img/bg/contacts_bg.jpg)  no-repeat;
+    background: url(../img/bg/contacts_bg.jpg)  center center no-repeat;
     background-size: cover;
-    height: 100%;
     position: relative;
     //padding-bottom: rem(64px);
 }
+
+
 
 .footer {
     position: absolute;
@@ -16,6 +17,12 @@
     background: url(../img/bg/footer.jpg) no-repeat;
     background-size: cover;
     height: rem(58px);
+    @include tablets() {
+      height: rem(64px);
+    }
+    @include phones() {
+      height: rem(142px);
+    }
 }
 
 .footer__container {
@@ -24,6 +31,7 @@
   align-items: center;
   @include phones {
     flex-direction: column;
+    height: rem(142px);
   }
 }
 
@@ -31,7 +39,6 @@
   width: 50%;
   @include phones {
   width: 100%;
-  //text-align: left;
   }
 }
 
@@ -41,6 +48,15 @@
     margin-bottom: rem(3px);
     color: #fff;
     font-size: rem(14px);
+    @include tablets() {
+      padding-left: rem(25px);
+      font-size: rem(15px);
+    }
+    @include phones() {
+      text-align: center;
+      font-size: rem(17px);
+      margin-top: rem(15px);
+    }
 }
 
 .footer__phone {
@@ -49,6 +65,10 @@
     @include ubuntu(bold);
     text-decoration: none;
     font-size: rem(14px);
+    @include phones() {
+      margin-left: rem(130px);
+      font-size: rem(17px);
+    }
 }
 
 .phone-icon {
@@ -62,8 +82,14 @@
   text-align: right;
   padding-right: rem(75px);
   padding-top: rem(10px);
-  @include phones {
+  @include tablets() {
+    padding-right: rem(25px);
+  }
+  @include phones() {
     justify-content: center;
+    padding-top: rem(20px);
+    padding-right: rem(50px);
+    ;
   }
 }
 
@@ -85,11 +111,19 @@
   &:hover {
     opacity: 1;
   }
+  @include phones() {
+    width: rem(30px);
+    height: rem(27px);
+  }
 }
 
 .social__link-icon {
   width: rem(20px);
   height: rem(20px);
+  @include phones() {
+    width: rem(25px);
+    height: rem(25px);
+  }
 }
 
 .social__item {

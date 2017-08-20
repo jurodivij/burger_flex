@@ -1,13 +1,23 @@
 .menu {
     background: url('../img/bg/menu_bg.png') 50% no-repeat;
     background-size: cover;
-    position: relative;
+	position: relative;
+
 }
 
 .menu__title {
 	position: absolute;
 	top: rem(82px);
 	left: rem(96px);
+	@include tablets() {
+		top: rem(90px);
+		left: rem(25px);
+	}
+	@include phones() {
+		font-size: rem(60px);
+		top: rem(55px);
+		left: rem(75px);
+	}
 }
 
 .menu-acco {
@@ -36,6 +46,12 @@
 	@include cover;
 	text-decoration: none;
 	position: relative;
+	@include tablets() {
+		padding-left: rem(10px);
+	}
+	@include phones() {
+		width: rem(90px);
+	}
 }
 
 .menu-acco__trigger-text {
@@ -46,13 +62,14 @@
 	justify-content: center;
 	align-items: center;
 	padding-top: rem(150px);
-//	white-space: nowrap;
-//  position: absolute;
-//  transform: rotate(-90deg) translateY(-50%);
-//  transform-origin: 0 0;
-//  left: 50%;
-//  top: 90%;
- // margin-top: rem(-20px);
+	@include tablets() {
+		padding-top: rem(900px);
+		padding-left: rem(10px);
+	}
+	@include tablets() {
+		padding-top: rem(760px);
+		padding-left: 0;
+	}
 }
 .menu-acco__trigger-text>span {
 	transform: rotate(-90deg);
@@ -60,6 +77,12 @@
 	font-size: rem(40px);
 	color: #fff;
 	@include gagalin;
+	@include tablets() {
+		font-size: rem(42px);
+	}
+	@include phones() {
+		font-size: rem(48px);
+	}
 }
 
 .menu-acco__content {

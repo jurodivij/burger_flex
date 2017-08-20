@@ -9,6 +9,9 @@
     @include tablets() {
         display: flex;
     }
+    @include phones() {
+        margin-left: rem(45px);
+    }
 
 
 }

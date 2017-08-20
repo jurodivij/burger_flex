@@ -48,7 +48,7 @@
 
     @include tablets {
     font-size: rem(14px);
-    padding: 0 12%;
+    //padding: 0 12%;
     text-align: center;
   }
 
@@ -65,8 +65,15 @@
     @include gagalin;
     font-size: rem(14px);
     padding-bottom: rem(19px);       
-    @include tablets {
+    @include tablets() {
   }
+    @include phones() {
+        margin-top: rem(18px);
+        margin-left: rem(30px);
+        margin-bottom: rem(10px);
+        line-height: 1.2;
+        font-size: rem(30px);
+    }
 }
 
 .reviews__text {

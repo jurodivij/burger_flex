@@ -2,12 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: url(../img/bg/contacts_bg.jpg)  center center no-repeat;
+//    background: url(../img/bg/contacts_bg.jpg)  center center no-repeat;
     background-size: cover;
     position: relative;
     //padding-bottom: rem(64px);
 }
 
+.contacts__map {
+    height: 100%;
+    //background: red;  
+}
 
 
 .footer {

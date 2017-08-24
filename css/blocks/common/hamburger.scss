@@ -8,9 +8,12 @@
 
     @include tablets() {
         display: flex;
+        margin-left: rem(38px);
+        margin-right: rem(-10px);
     }
     @include phones() {
-        margin-left: rem(45px);
+        margin-left: rem(40px);
+        height: rem(28px);
     }
 
 
@@ -23,6 +26,29 @@
         height: rem(5px);
         border-radius: rem(3px);
     }
+    @include phones() {
+        &, &:before, &:after {
+            width: rem(30px);  
+        }
+    }
+
+.hamburger-link_bars-hidden {
+    &:before, &:after {
+        position: absolute;
+        left: 15px;
+        content: '';
+        height: 260px;
+        width: 4px;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
 
 &:before, &:after {
     content: "";

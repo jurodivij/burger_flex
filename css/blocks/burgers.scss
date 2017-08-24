@@ -31,12 +31,16 @@
   width:90%;
 //  border: 1px solid red;
   display: flex;
+  justify-content: center;
   @include tablets() {
     flex-direction: column;   
 }
   @include phones() {
     width: 80%;
-    margin-top: rem(180px);
+    margin-top: rem(120px);
+  }
+  @include miniphones() {
+    margin-top: rem(110px);
   }
 
 }
@@ -57,6 +61,12 @@
   @include tablets() {
     margin-right: rem(-25px);
   }
+  @include phones() {
+    margin-right: rem(20px);
+  }
+  @include miniphones() {
+    margin-right: 0;
+  }
 }
 
 .burgers__slider-right {
@@ -64,12 +74,23 @@
   @include tablets() {
     margin-left: rem(-4px);
   }
+  @include phones() {
+    margin-left: rem(40px); 
+  }
+  @include miniphones() {
+    margin-left: rem(-1px);
+  }
 }
 
 .burgers__arrow-icon {
   width: rem(26px);
   height: rem(16px);
   fill: #fff;
+  @include phones() {
+    width: rem(30px);
+    height: rem(18px);
+    margin-bottom: rem(40px);
+  }
 }
 
 .burgers__arrow-icon_left {
@@ -82,6 +103,7 @@
 
 .burgers__column {
   width: 50%;
+  max-width: rem(485px);
 //  border: 1px solid green;
   display: flex;
   flex-direction: column;
@@ -90,6 +112,7 @@
   position: relative;
   @include tablets() {
     width: 90%;
+    max-width: rem(650px);
     //margin-top: rem(115px);
 
 }
@@ -103,8 +126,9 @@
   margin: auto;
   margin-left: rem(-15px);
   @include tablets() {
-    margin-left: rem(85px);
-    margin-top: rem(115px);
+    margin-left: rem(90px);
+    margin-top: rem(145px);
+    max-width: rem(640px);
     //margin: auto;   
   }
   @include phones() {
@@ -112,6 +136,10 @@
     margin-left: rem(70px);
     width: rem(500px);
   }
+  @include miniphones() {
+    width: rem(350px);   
+    margin-left: rem(20px);
+}
 }
 
 .burgers__preview-img {
@@ -120,8 +148,8 @@
 
 .burgers__contain {
   position: absolute;
-  top: rem(19px);
-  left: rem(20px);
+  top: rem(80px);
+  left: rem(15px);
   width: rem(90px);
   height: rem(90px);
   background-color: #f08c33;
@@ -133,10 +161,10 @@
     transition-duration: 0.4s;
   }
   @include tablets() {
-    top: rem(35px);
+    top: rem(55px);
     left: rem(112px);
-    width: rem(95px);
-    height: rem(95px);
+    width: rem(105px);
+    height: rem(105px);
   }
   @include phones() {
     top: rem(-133px);
@@ -163,21 +191,25 @@
 
 .burgers__kkal {
   position:absolute;
-  bottom: rem(8px);
+  bottom: rem(65px);
   left: rem(18px);
   width: rem(90px);
   height: rem(90px);
   @include gagalin();
   font-size: rem(14px);
   @include tablets() {
-    top: rem(35px);
-    left: auto;
-    right: rem(-5px);
+    top: rem(55px);
+    left: rem(555px);
+    //right: rem(-50px);
   }
   @include phones() {
     top: rem(-132px);
     right: rem(-128px);
   }
+  @include miniphones() {
+    right: rem(180px);   
+    top: rem(200px);
+}
 }
 
 .contain__list {
@@ -270,7 +302,7 @@
 .burgers__row {
   //margin-top: rem(45px);
   margin-left: rem(10px);
-  margin-bottom: rem(45px);
+  margin-bottom: rem(40px);
   @include tablets() {
     text-align: center;
     margin-left: rem(80px);
@@ -281,30 +313,35 @@
 }
 
 .burgers__caption {
-  margin-top: rem(10px);
+  margin-top: rem(70px);
   line-height: 0.9;
   color: #fff;
   @include tablets() {
-    margin-top: rem(65px);    
+    margin-top: rem(35px);    
   }
   @include phones() {
     margin-top: rem(15px);
     margin-left: rem(65px);
     font-size: rem(60px);
     line-height: 1.25;
-
   }
+  @include miniphones() {
+    line-height: 1.1;
+    font-size: rem(40px);  
+    margin-top: 0; 
+}
 }
 
 .burgers__text {
   font-size: rem(14px);
-  line-height:1.7;
+  line-height:1.8;
   color: #fff;
   @include tablets {
+    width: rem(650px);
     margin-top: rem(-20px);
     font-size: rem(15px);
-    margin-left: 0;
-    padding-left: rem(61px);
+    margin-left: rem(60px);
+    padding-left: rem(20px);
     margin-bottom: rem(20px);
   }
   @include phones() {
@@ -316,6 +353,13 @@
     font-size: rem(17px);
     line-height: 1.8;
   }
+  @include miniphones() {
+    width: rem(350px);
+    font-size: rem(15px);
+    line-height: 1.2;
+    margin-top: rem(5px);
+    margin-bottom: rem(5px);
+}
 }
 
 
@@ -323,11 +367,11 @@
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
-  margin-left: rem(-150px);
+  margin-left: rem(-140px);
   margin-top: rem(-40px);
   @include tablets() {
     margin-left: rem(80px);
-    margin-top: 0;
+    margin-top: rem(-5px);
   }
   @include phones() {
     margin-top: rem(-15px);
@@ -359,5 +403,11 @@
     margin-left: rem(5px);
     margin-right: rem(40px);
     font-size: rem(30px); 
+  }
+}
+
+.burgers__order>.btn {
+  @include phones() {
+    //margin-bottom: rem(20px);
   }
 }

@@ -2,6 +2,9 @@
     background: url('../img/bg/menu_bg.png') 50% no-repeat;
     background-size: cover;
 	position: relative;
+	@include tablets() {
+		//background-size: 180%
+	}
 
 }
 
@@ -17,6 +20,9 @@
 		font-size: rem(60px);
 		top: rem(55px);
 		left: rem(75px);
+	}
+	@include miniphones() {
+		left: rem(35px);
 	}
 }
 
@@ -52,6 +58,9 @@
 	@include phones() {
 		width: rem(90px);
 	}
+	@include miniphones() {
+		width: rem(60px);
+	}
 }
 
 .menu-acco__trigger-text {
@@ -63,12 +72,17 @@
 	align-items: center;
 	padding-top: rem(150px);
 	@include tablets() {
-		padding-top: rem(900px);
-		padding-left: rem(10px);
+		margin-top: rem(150px);
+		padding-top: rem(900px);//padding-top: rem(760px);
+		padding-left: rem(10px);//padding-left: 0;
 	}
-	@include tablets() {
-		padding-top: rem(760px);
-		padding-left: 0;
+	@include phones() {
+		padding-top: rem(600px);
+		//padding-left: rem(320px);
+	}
+	@include miniphones() {
+		padding-top: rem(200px);
+		margin-left: rem(-20px);
 	}
 }
 .menu-acco__trigger-text>span {
@@ -83,6 +97,9 @@
 	@include phones() {
 		font-size: rem(48px);
 	}
+	@include miniphones() {
+		font-size: rem(40px);
+	}
 }
 
 .menu-acco__content {
@@ -92,6 +109,19 @@
 	width: 0;
 	overflow: hidden;
 }
+.menu-acco__content_active {
+	width: rem(300px);
+	@include phones() {
+		width: rem(290px);
+	}
+	@include miniphones() {
+		width: rem(210px);
+	}
+}
+
+.menu-acco__content_active>.menu-acco__text {
+	display: block;
+}
 
 .menu-acco__text {
 	@include ubuntu(light);
@@ -99,6 +129,10 @@
 	color: #fff;
 	padding: rem(60px) rem(30px);
 	width: 100%;
-  line-height: 1.8;
-  display: none;
+  	line-height: 1.8;
+	display: none;
+	@include miniphones() {
+		padding: rem(20px) rem(10px);
+		line-height: 1.6;
+	}  
 }

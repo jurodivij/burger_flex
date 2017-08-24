@@ -22,7 +22,7 @@
     background-size: cover;
     height: rem(58px);
     @include tablets() {
-      height: rem(64px);
+      height: rem(58px);
     }
     @include phones() {
       height: rem(142px);
@@ -69,9 +69,16 @@
     @include ubuntu(bold);
     text-decoration: none;
     font-size: rem(14px);
+    @include tablets() {
+      margin-left: rem(-55px);
+      font-size: rem(15px);
+    }
     @include phones() {
       margin-left: rem(130px);
       font-size: rem(17px);
+    }
+    @include miniphones() {
+      margin: auto;  
     }
 }
 
@@ -87,13 +94,15 @@
   padding-right: rem(75px);
   padding-top: rem(10px);
   @include tablets() {
-    padding-right: rem(25px);
+    padding-right: rem(5px);
   }
   @include phones() {
     justify-content: center;
     padding-top: rem(20px);
     padding-right: rem(50px);
-    ;
+  }
+  @include miniphones() {
+    padding-top: 0;
   }
 }
 

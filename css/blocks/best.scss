@@ -8,8 +8,11 @@
 .container-best {
     margin: auto auto;
     padding-bottom: rem(125px);
+    justify-content: center;
     @include tablets() {
         margin: 13% auto;
+        justify-content: flex-start;
+        margin-left: rem(30px);
     }
     @include phones() {
         padding-bottom: 0;
@@ -17,6 +20,9 @@
         width: 100%;
         margin-left: rem(15px);
         margin-bottom: rem(155px);
+    }
+    @include miniphones() {
+        margin-bottom: 0;
     }
 }
 
@@ -38,7 +44,13 @@
     }
     @include phones() {
         margin-top: rem(80px);
+        margin-left: rem(25px);
         flex-direction: column;
+    }
+    @include miniphones() {
+        margin-top: rem(10px);
+        width: rem(360px);
+        margin-left: 0;
     }
 }
 
@@ -55,6 +67,9 @@
             margin-bottom: rem(90px);
         }
     }
+    @include miniphones() {
+        margin-bottom: rem(80px);   
+    }
 }
 
 .best__pic {
@@ -68,7 +83,7 @@
 }
 
 .best__text {
-    width: 70%;
+    width: 100%;
 }
 
 .best__icon {
@@ -90,6 +105,9 @@
         font-size: rem(30px);
         margin-bottom: rem(5px);
     }
+    @include miniphones() {
+        font-size: rem(24px);
+    }
 }
 
 .best__desc {
@@ -101,5 +119,8 @@
     @include phones() {
         text-align: left;
         font-size: rem(17px);
+    }
+    @include miniphones() {
+        line-height: 1.1;   
     }
 }

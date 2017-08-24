@@ -16,6 +16,10 @@
         transition-duration: 0.4s;
          
     }
+    @include tablets () {
+        padding-bottom: rem(11px);
+        padding-left: rem(21px);
+    }
     @include phones() {
         font-size: rem(16px);
     }

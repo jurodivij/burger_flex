@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <div class="maincontent">
-            <section class="section hero">
+            <section class="section hero active">
               <div class="container">
                 <header class="header">
                     <div class="logo">
@@ -20,16 +20,16 @@
                     <div class="header__btns">
                         <nav class="nav">
                             <ul class="nav__list">
-                                <li class="nav__item"><a href="#" class="nav__link">о нас</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">бургеры</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">команда</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">меню</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">отзывы</a></li>
-                                <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
+                                <li class="nav__item"><a href="#" data-scroll-to="1" class="nav__link">о нас</a></li>
+                                <li class="nav__item"><a href="#" data-scroll-to="2" class="nav__link">бургеры</a></li>
+                                <li class="nav__item"><a href="#" data-scroll-to="3" class="nav__link">команда</a></li>
+                                <li class="nav__item"><a href="#" data-scroll-to="4" class="nav__link">меню</a></li>
+                                <li class="nav__item"><a href="#" data-scroll-to="5" class="nav__link">отзывы</a></li>
+                                <li class="nav__item"><a href="#" data-scroll-to="7" class="nav__link">контакты</a></li>
                             </ul>
                         </nav>
                         <div class="header__portable">
-                            <a href="#" class="btn">Заказать</a>
+                            <a href="#" data-scroll-to="6" class="btn">Заказать</a>
                             <a href="#" class="hamburger-link">
                                 <div class="hamburger-link_bars"></div>
                             </a>
@@ -606,8 +606,7 @@
             </section>
  <!--////////////////////////////////////////////////////////////////////-->          
             <section class="section contacts">
-                <div class="contacts__map" id="map">
-                    
+                <div class="contacts__map" id="map">                   
                 </div>
                 <script src="./js/map.js"></script>
                  <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
@@ -662,15 +661,21 @@
         </div>
     </div>
     <ul class="fixed-menu">
-        <li class="fixed-menu__item active"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item active"><a href="#" data-scroll-to="0" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="1" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="2" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="3" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="4" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="5" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="6" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="7" class="fixed-menu__link"></a></li>
     </ul>
+    <script src="./js/jquery.touchSwipe.min.js"></script>
+    <script src="//cdn.jsdelivr.net/mobile-detect.js/1.3.6/mobile-detect.min.js"></script>  
     <script src="./js/main.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/menu_acco.js"></script>
+    <script src="./js/team_acco.js"></script>
+    <script src="./js/hero_portable.js"></script>
 </body>
 </html>
